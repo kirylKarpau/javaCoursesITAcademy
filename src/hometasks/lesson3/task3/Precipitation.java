@@ -16,9 +16,9 @@ public class Precipitation {
         }
 
         int daysQuantity = number;
-        int value = 0;
+        int value;
         double rainfallAmount = 0;
-        double averageRainFall = 0;
+        double averageRainFall;
 
         while (number > 0) {
             System.out.println("ENTER THE RAINFALL VALUE and please note that " + number + "  enters will be required");

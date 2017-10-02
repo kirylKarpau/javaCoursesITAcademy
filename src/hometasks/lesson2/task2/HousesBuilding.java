@@ -22,7 +22,6 @@ public class HousesBuilding {
 
         if (a < 1 || b < 1 || c < 1 || d < 1 || e < 1 || f < 1) {
             System.out.println("Incorrect value was entered");
-            return;
         } else if ((isLess(a, b, e) && isLess(b, d, f))
                 || (isLess(a, c, f) && isLess(b, d, e))
                 || (isLess(a, d, e) && isLess(b, c, f))
@@ -32,11 +31,9 @@ public class HousesBuilding {
         } else {
             System.out.println("Houses cannot be built on the plot");
         }
-
-
     }
 
-    public static boolean isLess(int firstHouseSize, int secondHouseSize, int plotSize) {
+    private static boolean isLess(int firstHouseSize, int secondHouseSize, int plotSize) {
         return firstHouseSize + secondHouseSize <= plotSize;
     }
 

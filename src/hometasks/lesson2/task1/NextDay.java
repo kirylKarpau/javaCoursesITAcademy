@@ -1,6 +1,5 @@
 package hometasks.lesson2.task1;
 
-
 import java.util.Scanner;
 
 public class NextDay {
@@ -33,7 +32,6 @@ public class NextDay {
                 } else {
                     day = 1;
                     month++;
-
                 }
                 System.out.println(getCountedDate(day, month, year));
                 break;
@@ -49,7 +47,6 @@ public class NextDay {
                 } else {
                     day = 1;
                     month++;
-
                 }
                 System.out.println(getCountedDate(day, month, year));
                 break;
@@ -80,38 +77,24 @@ public class NextDay {
                 break;
             default:
                 System.out.println("Incorrect month was entered.");
-                return;
-
         }
-
-        /*if (month < 12) {
-            System.out.println(getCountedDate(day, month, year));
-        } else {
-            month = 1;
-            year++;
-            System.out.println(getCountedDate(day, month, year));
-
-        }*/
-
     }
 
-    public static String getCountedDate(int day, int month, int year) {
-
+    private static String getCountedDate(int day, int month, int year) {
         return "Counted date is :" + addZeroInBegin(day) + "." + addZeroInBegin(month) + "." + addZeroInBeginOfYear(year);
     }
 
-    public static boolean isIncorrectDayEntered(int day) {
+    private static boolean isIncorrectDayEntered(int day) {
         return day < 0 && day > 31;
     }
 
-
-    public static String addZeroInBegin(int value) {
+    private static String addZeroInBegin(int value) {
         if (value < 10) {
             return "0" + value;
         } else return "" + value;
     }
 
-    public static String addZeroInBeginOfYear(int value) {
+    private static String addZeroInBeginOfYear(int value) {
         if (value < 10) {
             return "000" + value;
         } else if (value < 100) {
@@ -119,17 +102,6 @@ public class NextDay {
         } else if (value < 1000) {
             return "0" + value;
         }
-        return "" + value;
+        return String.valueOf(value);
     }
 }
-
-
-
-/*
-* 1) Incorrect value : 0, -10
-* 2) Out of the range : month range 1-12; day range :1-31; year range : 1 2017
-* 3) Incorrect 31 day for 4,6,9,11 month; 30 and 31 for 2 month
-*
-*
-*
-* */

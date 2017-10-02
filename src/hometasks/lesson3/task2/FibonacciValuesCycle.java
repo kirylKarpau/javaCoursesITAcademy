@@ -11,11 +11,10 @@ public class FibonacciValuesCycle {
 
         int firstValue = 0;
         int secondValue = 1;
+        int result = 0;
         System.out.print("The result is :\n" + firstValue + " " + secondValue);
 
-        int result;
-
-        for (int i = 0; ; i++) {
+        while (result < number) {
             result = firstValue + secondValue;
             if (result >= number) {
                 return;
@@ -23,8 +22,6 @@ public class FibonacciValuesCycle {
             System.out.print(" " + result);
             firstValue = secondValue;
             secondValue = result;
-
         }
-
     }
 }
