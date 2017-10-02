@@ -1,4 +1,4 @@
-package hometasks.lesson5.Strings.Task1;
+package hometasks.lesson5.Strings.task1;
 
 
 public class Palindrome {
